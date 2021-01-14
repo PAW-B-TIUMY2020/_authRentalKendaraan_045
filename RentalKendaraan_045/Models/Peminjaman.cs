@@ -25,7 +25,7 @@ namespace RentalKendaraan_045.Models
         public int? IdKendaraan { get; set; }
         [Required(ErrorMessage = "Customer wajib diisi!")]
         [DisplayName("Customer")]
-        public int? IdCostumer { get; set; }
+        public int? IdCustomer { get; set; }
         [Required(ErrorMessage = "Jaminan wajib diisi!")]
         [DisplayName("Jaminan")]
         public int? IdJaminan { get; set; }
@@ -34,7 +34,7 @@ namespace RentalKendaraan_045.Models
         public int? Biaya { get; set; }
         [DisplayName("Customer")]
         [Required(ErrorMessage = "Customes wajib diisi!")]
-        public Customer IdCostumerNavigation { get; set; }
+        public Customer IdCustomerNavigation { get; set; }
         [DisplayName("Jaminan")]
         [Required(ErrorMessage = "jamninan wajib diisi!")]
         public Jaminan IdJaminanNavigation { get; set; }

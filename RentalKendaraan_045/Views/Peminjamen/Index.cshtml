@@ -27,7 +27,7 @@
                 </a>
             </th>
             <th>
-                @*Html.DisplayNameFor(model => model.IdCostumerNavigation)*@
+                @*Html.DisplayNameFor(model => model.IdCustomerNavigation)*@
                 <a asp-action="Index" asp-route-sortOrder="@ViewData["NamaSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">
                     Nama Customer
                 </a>
@@ -53,7 +53,7 @@
                     @Html.DisplayFor(modelItem => item.TglPeminjaman)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.IdCostumerNavigation.NamaCustomer)
+                    @Html.DisplayFor(modelItem => item.IdCustomerNavigation.NamaCustomer)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Biaya)

@@ -166,7 +166,7 @@ namespace RentalKendaraan_045.Models
                     .HasColumnName("ID_Peminjaman")
                     .ValueGeneratedNever();
 
-                entity.Property(e => e.IdCostumer).HasColumnName("ID_Customer");
+                entity.Property(e => e.IdCustomer).HasColumnName("ID_Customer");
 
                 entity.Property(e => e.IdJaminan).HasColumnName("ID_Jaminan");
 
@@ -176,9 +176,9 @@ namespace RentalKendaraan_045.Models
                     .HasColumnName("Tgl_Peminjaman")
                     .HasColumnType("datetime");
 
-                entity.HasOne(d => d.IdCostumerNavigation)
+                entity.HasOne(d => d.IdCustomerNavigation)
                     .WithMany(p => p.Peminjaman)
-                    .HasForeignKey(d => d.IdCostumer)
+                    .HasForeignKey(d => d.IdCustomer)
                     .HasConstraintName("FK_Peminjaman_Customer");
 
                 entity.HasOne(d => d.IdJaminanNavigation)

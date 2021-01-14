@@ -66,35 +66,36 @@
                             <span>Menu</span>
                         </a>
                         <ul class="sub">
-                                @if (User.IsInRole("Admin"))
-                    {
-                        <li><a asp-area="" asp-controller="Role" asp-action="Index">Role</a></li>
+                            @if (User.IsInRole("Admin"))
+                            {
+                                <li><a asp-area="" asp-controller="Role" asp-action="Index">Role</a></li>
 
-                                <li><a asp-area="" asp-controller="Customer" asp-action="Index">Customer</a></li>
-                                <li><a asp-area="" asp-controller="Peminjaman" asp-action="Index">Peminjaman</a></li>
-                                <li><a asp-area="" asp-controller="Pengembalian" asp-action="Index">Pengembalian</a></li>
-                                <li><a asp-area="" asp-controller="Kendaraan" asp-action="Index">Kendaraan</a></li>
-                                <li><a asp-area="" asp-controller="JenisKendaraan" asp-action="Index">Jenis Kendaraan</a></li>
-                                <li><a asp-area="" asp-controller="KondisiKendaraan" asp-action="Index">Kondisi Kendaraan</a></li>
-                                <li><a asp-area="" asp-controller="Jaminan" asp-action="Index">Jaminan</a></li>
-                                <li><a asp-area="" asp-controller="Gender" asp-action="Index">Gender</a></li>
- 
-                    }
-                    else if (User.IsInRole("Manager"))
-                    {
-                                <li><a asp-area="" asp-controller="Peminjaman" asp-action="Index">Peminjaman</a></li>
-                                <li><a asp-area="" asp-controller="Pengembalian" asp-action="Index">Pengembalian</a></li>   
-                    }
-                    else if (User.IsInRole("Kasir"))
-                    {
-                                <li><a asp-area="" asp-controller="Customer" asp-action="Index">Customer</a></li>
-                                <li><a asp-area="" asp-controller="Peminjaman" asp-action="Index">Peminjaman</a></li>
-                                <li><a asp-area="" asp-controller="Pengembalian" asp-action="Index">Pengembalian</a></li>
-                                <li><a asp-area="" asp-controller="Kendaraan" asp-action="Index">Kendaraan</a></li>
-                                <li><a asp-area="" asp-controller="JenisKendaraan" asp-action="Index">Jenis Kendaraan</a></li>
-                                <li><a asp-area="" asp-controller="KondisiKendaraan" asp-action="Index">Kondisi Kendaraan</a></li>
-                                <li><a asp-area="" asp-controller="Jaminan" asp-action="Index">Jaminan</a></li>
-                    }
+                                <li><a asp-area="" asp-controller="Customers" asp-action="Index">Customer</a></li>
+                                <li><a asp-area="" asp-controller="Genders" asp-action="Index">Gender</a></li>
+                                <li><a asp-area="" asp-controller="Jaminans" asp-action="Index">Jaminan</a></li>
+                                <li><a asp-area="" asp-controller="JenisKendaraans" asp-action="Index">Jenis Kendaraan</a></li>
+                                <li><a asp-area="" asp-controller="Kendaraans" asp-action="Index">Kendaraan</a></li>
+                                <li><a asp-area="" asp-controller="KondisiKendaraans" asp-action="Index">Kondisi Kendaraan</a></li>
+                                <li><a asp-area="" asp-controller="Peminjamen" asp-action="Index">Peminjaman</a></li>
+                                <li><a asp-area="" asp-controller="Pengembalians" asp-action="Index">Pengembalian</a></li>
+                            }
+                            else if (User.IsInRole("Manager"))
+                            {
+                                <li><a asp-area="" asp-controller="Peminjamen" asp-action="Index">Peminjaman</a></li>
+                                <li><a asp-area="" asp-controller="Pengembalians" asp-action="Index">Pengembalian</a></li>
+
+                            }
+                            else if (User.IsInRole("Kasir"))
+                            {
+                                <li><a asp-area="" asp-controller="Customers" asp-action="Index">Customer</a></li>
+                                <li><a asp-area="" asp-controller="Genders" asp-action="Index">Gender</a></li>
+                                <li><a asp-area="" asp-controller="Jaminans" asp-action="Index">Jaminan</a></li>
+                                <li><a asp-area="" asp-controller="JenisKendaraans" asp-action="Index">Jenis Kendaraan</a></li>
+                                <li><a asp-area="" asp-controller="Kendaraans" asp-action="Index">Kendaraan</a></li>
+                                <li><a asp-area="" asp-controller="KondisiKendaraans" asp-action="Index">Kondisi Kendaraan</a></li>
+                                <li><a asp-area="" asp-controller="Peminjamen" asp-action="Index">Peminjaman</a></li>
+                                <li><a asp-area="" asp-controller="Pengembalians" asp-action="Index">Pengembalian</a></li>
+                            }
                         </ul>
                     </li>
                     <li class="mt">
