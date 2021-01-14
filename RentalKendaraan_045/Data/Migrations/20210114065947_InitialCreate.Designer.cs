@@ -10,7 +10,7 @@ using RentalKendaraan_045.Models;
 namespace RentalKendaraan_045.Data.Migrations
 {
     [DbContext(typeof(RentKendaraanContext))]
-    [Migration("20210114040740_InitialCreate")]
+    [Migration("20210114065947_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -331,7 +331,7 @@ namespace RentalKendaraan_045.Data.Migrations
                     b.Property<int?>("Biaya")
                         .IsRequired();
 
-                    b.Property<int?>("IdCostumer")
+                    b.Property<int?>("IdCustomer")
                         .IsRequired()
                         .HasColumnName("ID_Customer");
 
@@ -350,7 +350,7 @@ namespace RentalKendaraan_045.Data.Migrations
 
                     b.HasKey("IdPeminjaman");
 
-                    b.HasIndex("IdCostumer");
+                    b.HasIndex("IdCustomer");
 
                     b.HasIndex("IdJaminan");
 
@@ -454,9 +454,9 @@ namespace RentalKendaraan_045.Data.Migrations
 
             modelBuilder.Entity("RentalKendaraan_045.Models.Peminjaman", b =>
                 {
-                    b.HasOne("RentalKendaraan_045.Models.Customer", "IdCostumerNavigation")
+                    b.HasOne("RentalKendaraan_045.Models.Customer", "IdCustomerNavigation")
                         .WithMany("Peminjaman")
-                        .HasForeignKey("IdCostumer")
+                        .HasForeignKey("IdCustomer")
                         .HasConstraintName("FK_Peminjaman_Customer")
                         .OnDelete(DeleteBehavior.Cascade);
 
